@@ -1,0 +1,27 @@
+{
+  "name": "kafka-cluster",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "start:http1": "set PORT=4001 && nodemon src/httpServer.js",
+    "start:http2": "set PORT=4002 && nodemon src/httpServer.js",
+    "start:consumer1": "nodemon src/consumer.js",
+    "start:consumer2": "nodemon src/consumer.js",
+    "start:consumer3": "nodemon src/consumer.js",
+    "start:consumer4": "nodemon src/consumer.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "kafkajs": "^2.2.4",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
