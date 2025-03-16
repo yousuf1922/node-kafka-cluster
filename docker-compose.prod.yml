@@ -262,8 +262,8 @@ services:
         ports:
             - "80:80" # Expose Nginx on port 80
         volumes:
-            # - ./nginx.conf:/etc/nginx/nginx.conf:ro # Mount custom Nginx config
-            - /mnt/d/OCodes/kafka/nginx.conf:/etc/nginx/nginx.conf # Mount custom Nginx config
+            # - ./nginx.conf:/etc/nginx/nginx.conf:ro # Mount custom Nginx config if use Docker Desktop
+            - /mnt/d/OCodes/kafka/node-kafka-cluster/nginx.conf:/etc/nginx/nginx.conf # Mount custom Nginx config if use WSL Docker
         networks:
             - kafka-net
         restart: unless-stopped
